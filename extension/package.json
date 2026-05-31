@@ -1,0 +1,41 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "qfinder",
+  "title": "Qfinder",
+  "description": "Hyper fast local search powered by Rust & SQLite",
+  "icon": "command-icon.png",
+  "author": "developer",
+  "categories": [
+    "Productivity",
+    "System"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "Search Qfinder",
+      "description": "Query files, notes, and clipboards instantaneously",
+      "mode": "view"
+    },
+    {
+      "name": "manage",
+      "title": "Manage Qfinder",
+      "description": "Add/remove watched folders, restart daemon",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.80.0",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.8",
+    "@types/node": "^20.8.10",
+    "@types/react": "^19.0.10",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop"
+  }
+}
