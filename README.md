@@ -4,6 +4,8 @@ This tries to fix that file search keeping it sub 10 milli seconds.
 Compare it yourself try running it on your Mac .
 
 ##### Installation
+move to /extension and run it once
+$ bun dev 
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/sp4s-s/Qfinder/main/install.sh | bash
