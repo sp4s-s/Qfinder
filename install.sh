@@ -52,14 +52,25 @@ rm -rf ~/.qfinder/extension
 cp -r "$REPO_DIR/extension" ~/.qfinder/extension
 cd ~/.qfinder/extension
 bun install
+
+echo "=> Building extension..."
+bun run build
+
+echo "=> Registering extension with Raycast..."
+open -ga Raycast 2>/dev/null || true
+sleep 2
+./node_modules/.bin/ray develop -I >/tmp/qfinder-raycast-import.log 2>&1 &
+RAY_DEV_PID=$!
+sleep 6
+kill "$RAY_DEV_PID" >/dev/null 2>&1 || true
+wait "$RAY_DEV_PID" >/dev/null 2>&1 || true
+
+echo "=> Finalizing production extension build..."
 bun run build
 
 echo ""
 echo "✅ Qfinder (qfinder) installed successfully!"
 echo "   The background daemon is running."
-echo ""
-echo "   To use it in Raycast:"
-echo "   1. Open Raycast Settings -> Extensions"
-echo "   2. Click '+' -> Add Local Extension Directory"
-echo "   3. Select the folder: ~/.qfinder/extension"
+echo "   The Raycast extension has been registered."
+echo "   Open Raycast and type: Search Qfinder"
 echo ""
