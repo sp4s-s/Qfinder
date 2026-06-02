@@ -1,5 +1,5 @@
 use notify::RecursiveMode;
-use notify_debouncer_mini::{new_debouncer, DebouncedEvent};
+use notify_debouncer_mini::new_debouncer;
 use std::path::Path;
 use std::fs;
 use std::sync::mpsc;

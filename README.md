@@ -6,10 +6,10 @@ Compare it yourself try running it on your Mac .
 ##### Installation
 
 ```bash
-curl -sL https://raw.githubusercontent.com/sp4s-s/Qfinder/refs/heads/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/sp4s-s/Qfinder/main/install.sh | bash
 ```
 
-#### COmpare it by running
+#### Compare it by running
 ```python
 python3 compare.py file
 # broken name search

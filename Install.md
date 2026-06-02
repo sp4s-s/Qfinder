@@ -12,7 +12,7 @@ npm install -g @raycast/api
 ## install
 
 ```bash
-curl -sL https://raw.githubusercontent.com/sp4s-s/quicktip/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/sp4s-s/Qfinder/main/install.sh | bash
 ```
 
 that's it. the daemon auto-starts at login via launchd.

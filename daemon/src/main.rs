@@ -1,3 +1,5 @@
+#![allow(unexpected_cfgs)]
+
 mod db;
 mod search;
 mod watcher;
