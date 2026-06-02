@@ -6,7 +6,7 @@ Compare it yourself try running it on your Mac .
 ##### Installation
 
 ```bash
-curl -sL https://raw.githubusercontent.com/sp4s-s/qfinder/main/install.sh | bash
+curl -sL https://raw.githubusercontent.com/sp4s-s/Qfinder/refs/heads/main/install.sh | bash
 ```
 
 #### COmpare it by running
