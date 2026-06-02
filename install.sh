@@ -8,7 +8,7 @@ if [ -d "daemon" ] && [ -d "extension" ]; then
 else
     echo "=> Downloading QuickTip repository..."
     TMP_DIR=$(mktemp -d)
-    git clone https://github.com/sp4s-s/quicktip.git "$TMP_DIR"
+    git clone https://github.com/sp4s-s/Qfinder.git "$TMP_DIR"
     cd "$TMP_DIR"
     REPO_DIR="$TMP_DIR"
 fi
