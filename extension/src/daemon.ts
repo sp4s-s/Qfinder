@@ -8,7 +8,7 @@ const SOCKET_PATH = path.join(os.homedir(), ".qfinder", "socket.sock");
 export class DaemonClient {
   private client: net.Socket | null = null;
   private pendingResolvers: ((value: unknown) => void)[] = [];
-  private buffer = Buffer.alloc(0);
+  private buffer: ReturnType<typeof Buffer.alloc> = Buffer.alloc(0);
   private retryDelay = 100;
 
   constructor() {
@@ -18,8 +18,8 @@ export class DaemonClient {
   private connect() {
     this.client = net.createConnection(SOCKET_PATH);
 
-    this.client.on("data", (data: Buffer) => {
-      this.buffer = Buffer.concat([this.buffer as Buffer, data as Buffer]) as Buffer;
+    this.client.on("data", (data) => {
+      this.buffer = Buffer.concat([Uint8Array.from(this.buffer), Uint8Array.from(data)]);
       while (this.buffer.length >= 4) {
         const msgLen = this.buffer.readUInt32BE(0);
         if (this.buffer.length >= 4 + msgLen) {

@@ -6,7 +6,7 @@ if [ -d "daemon" ] && [ -d "extension" ]; then
     echo "=> Running installer from local repository..."
     REPO_DIR=$(pwd)
 else
-    echo "=> Downloading QuickTip repository..."
+    echo "=> Downloading Qfinder repository..."
     TMP_DIR=$(mktemp -d)
     git clone https://github.com/sp4s-s/Qfinder.git "$TMP_DIR"
     cd "$TMP_DIR"
@@ -55,7 +55,7 @@ bun install
 bun run build
 
 echo ""
-echo "✅ QuickTip (qfinder) installed successfully!"
+echo "✅ Qfinder (qfinder) installed successfully!"
 echo "   The background daemon is running."
 echo ""
 echo "   To use it in Raycast:"
