@@ -9,9 +9,10 @@ Compare it yourself try running it on your Mac .
 curl -fsSL https://raw.githubusercontent.com/sp4s-s/Qfinder/main/install.sh | bash
 ```
 <br>
-**in-case-doesnt start/load**
-clone it 
-move to /extension and run it once
+
+**in-case-doesnt start/load** <br>
+clone it <br>
+move to /extension and run it once <br>
 ```
 git clone https://github.com/sp4s-s/Qfinder.git
 cd extension
